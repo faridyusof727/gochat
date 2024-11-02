@@ -1,4 +1,4 @@
-module github.com/faridyusof727/go-chat
+module github.com/faridyusof727/gochat
 
 go 1.22.5
 
