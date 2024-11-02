@@ -1,6 +1,6 @@
 # Go Chat
 
-A simple Go library for interacting
+A simple Go library for interacting with Google Chat API.
 
 ## Installation
 
