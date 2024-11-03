@@ -17,3 +17,14 @@ type StdMessenger interface {
 	// sent to the existing thread.
 	StartOrReplyThread(message string, threadKey string) (*Response, error)
 }
+
+type Formatter interface {
+	Bold(text string) Formatter
+	Italic(text string) Formatter
+	StrikeThrough(text string) Formatter
+	Monospace(text string) Formatter
+	Code(text string) Formatter
+	List(list []string) Formatter
+	NewLine() Formatter
+	ToString() string
+}

@@ -13,7 +13,8 @@ go get github.com/faridyusof727/go-chat
 - Send messages to Google Chat
 - Start or reply to threads
 - Simple and easy-to-use interface
-
+- Custom format of your message
+  
 ## Usage
 
 ### Initialize Client
@@ -44,6 +45,27 @@ if err != nil {
 
 ```go
 response, err := client.StdMessenger().SendMessage("Hello, world!")
+if err != nil {
+    log.Fatal(err)
+}
+```
+
+### Send Simple Message with formatting
+
+```go
+// Create a formatter
+f := gochat.NewFormatter()
+    f.Bold("Main Title").
+        NewLine().
+        Italic("Username: johndoe").
+        NewLine().
+        NewLine().
+        List([]string{"Name: John Doe", "Age: 20", "Category: 2A"}).
+        NewLine().
+        Code("package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, world!\")")
+
+// Send message with formatting
+response, err := client.StdMessenger().SendMessage(f.ToString())
 if err != nil {
     log.Fatal(err)
 }
