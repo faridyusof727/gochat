@@ -5,7 +5,7 @@ A simple Go library for interacting with Google Chat API.
 ## Installation
 
 ```bash
-go get github.com/faridyusof727/gochat@v0.1.3
+go get github.com/faridyusof727/gochat@v0.1.5
 ```
 
 ## Features
@@ -14,6 +14,7 @@ go get github.com/faridyusof727/gochat@v0.1.3
 - Start or reply to threads
 - Simple and easy-to-use interface
 - Custom format of your message (v0.1.3)
+- Send message with normal text (v0.1.5)
   
 ## Usage
 
