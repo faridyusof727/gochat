@@ -6,6 +6,12 @@ type FormatterImpl struct {
 	content string
 }
 
+// Text implements Formatter.
+func (f *FormatterImpl) Text(text string) Formatter {
+	f.content += text
+	return f
+}
+
 // NewLine implements Formatter.
 func (f *FormatterImpl) NewLine() Formatter {
 	f.content += "\n"

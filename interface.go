@@ -19,6 +19,7 @@ type StdMessenger interface {
 }
 
 type Formatter interface {
+	Text(text string) Formatter
 	Bold(text string) Formatter
 	Italic(text string) Formatter
 	StrikeThrough(text string) Formatter
